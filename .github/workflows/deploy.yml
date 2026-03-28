@@ -21,9 +21,6 @@ jobs:
           mkdir -p public
           git ls-files | xargs -I{} cp --parents {} public || true
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v3
-
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v4
         with:
